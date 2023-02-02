@@ -5,9 +5,7 @@ LABEL "com.eheredia.maintainer"=""
 LABEL "version"="2023.0.1"
 
 RUN apk update \
-  && apk add bash ca-certificates git openssh gcc g++ curl libc6-compat libc-dev make pkgconf
-
-#RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+  && apk add bash openssh gcc g++ curl libc6-compat libc-dev make pkgconf
 
 WORKDIR /go/src/digital_shift
 # Copy all the Code and stuff to compile everything
@@ -27,7 +25,6 @@ FROM alpine:latest
 
 # # `service` should be replaced here as well
 COPY --from=builder /go/src/digital_shift/compiled-app .
-#COPY --from=builder /go/src/digital_shift/pkg/i18n pkg/i18n
 
 ENV SERVICE="eh-digital-shift"
 

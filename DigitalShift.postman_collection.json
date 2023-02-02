@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "86e4c7ad-5397-412a-9e0b-6a248db3bc27",
+		"name": "DigitalShift",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20595592"
+	},
+	"item": [
+		{
+			"name": "Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"client_id\": \"3\",\n    \"number\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/digital-shift/booking",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-shift",
+						"booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Booking List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/digital-shift/booking-list",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"digital-shift",
+						"booking-list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

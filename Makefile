@@ -20,10 +20,3 @@ test:
 
 build-image:
 	 DOCKER_BUILDKIT=1  docker build  --ssh default  --force-rm -t template --no-cache .
-
-.PHONY: swagger
-swag-install:
-	go install github.com/swaggo/swag/cmd/swag@v1.8.7
-
-swag-generate: 
-	swag init --parseDependency --parseInternal -d "./cmd/httpserver/main"	
